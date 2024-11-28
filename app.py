@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "ברוכים הבאים לאתר בדיקת סת"ם!"
+    return "ברוכים הבאים לאתר בדיקת סת""ם!"
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
