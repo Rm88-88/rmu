@@ -1,12 +1,24 @@
 ```javascript
-function openFolder(folderName) {
-    alert('פתחת תיקיה: ' + folderName);
-}
+document.getElementById('login').addEventListener('click', function() {
+    document.getElementById('user-area').style.display = 'block';
+    document.getElementById('guest-area').style.display = 'none';
+});
 
-function uploadImage() {
-    alert('תמונה הועלתה!');
-}
+document.getElementById('guest-login').addEventListener('click', function() {
+    document.getElementById('guest-area').style.display = 'block';
+    document.getElementById('user-area').style.display = 'none';
+});
 
-function checkImageQuality() {
-    document.getElementById('quality-result').innerText = 'בדיקת איכות התמונה מתבצעת...';
-}
+// Cookie notice
+document.getElementById('accept-cookies').addEventListener('click', function() {
+    document.getElementById('cookie-notice').style.display = 'none';
+});
+
+// Navigation
+document.getElementById('home').addEventListener('click', function() {
+    // Logic to go to home
+});
+
+document.getElementById('back').addEventListener('click', function() {
+    // Logic to go back one page
+});
