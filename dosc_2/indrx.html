@@ -3,56 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>הגהת סת"ם</title>
+    <title>ברוכים הבאים להגהות סת"ם</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>אתר הגהות סת"ם</h1>
-        <nav>
-            <ul>
-                <li><a href="#login">כניסה לאזור האישי</a></li>
-                <li><a href="#guest">שימוש כאורח</a></li>
-                <li><a href="#history">היסטוריה</a></li>
-                <li><a href="#settings">הגדרות אישיות</a></li>
-                <li><a href="#help">עזרה/אודות</a></li>
-                <li><a href="#cookies">אישור עוגיות</a></li>
-            </ul>
-        </nav>
+        <h1>ברוכים הבאים להגהות סת"ם</h1>
+        <div id="cookie-notice">אישור עוגיות - <button id="accept-cookies">אישור</button></div>
     </header>
 
     <main>
-        <section id="personal-area">
-            <h2>אזור אישי</h2>
-            <button onclick="openFolder('ספר תורה')">ספר תורה</button>
-            <button onclick="openFolder('תפילין')">תפילין</button>
-            <button onclick="openFolder('מזוזות')">מזוזות</button>
-			<button onclick="openFolder('מגילת אסתר')">מגילות אסתר</button>
-			<button onclick="openFolder('נביאים')">נביאים</button>
-			<button onclick="openFolder('מגילות כללי')">מגילות כללי</button>
-			<button onclick="openFolder('קטורת')">קטורת</button>
-            <!-- הוספת כפתורים נוספים לפי הצורך -->
-        </section>
+        <div class="balloons">
+            <button id="login">כניסה לאיזור האישי</button>
+            <button id="guest-login">כניסה כאורח</button>
+        </div>
 
-        <section id="upload-images">
-            <h2>העלאת תמונות</h2>
-            <button onclick="uploadImage()">העלה תמונה</button>
-			<input type="file" accept="image/jpeg" />
-        </section>
+        <div id="user-area" style="display: none;">
+            <div class="balloons">
+                <button class="menu-item">ספר תורה</button>
+                <button class="menu-item">תפילין</button>
+                <button class="menu-item">מזוזות</button>
+                <button class="menu-item">נביאים</button>
+                <button class="menu-item">מגילות</button>
+                <button class="menu-item">קטורות</button>
+            </div>
+            <div id="history" style="display: none;"></div>
+        </div>
 
-        <section id="image-analysis">
-            <h2>בדיקת איכות התמונה</h2>
-            <button onclick="checkImageQuality()">בדוק איכות תמונה</button>
-            <p id="quality-result"></p>
-        </section>
-        
-        <!-- הוספת עוד סעיפים לפי הצורך -->
+        <div id="guest-area" style="display: none;">
+            <div class="balloons">
+                <button class="menu-item">ספר תורה</button>
+                <button class="menu-item">תפילין</button>
+                <button class="menu-item">מזוזות</button>
+                <button class="menu-item">נביאים</button>
+                <button class="menu-item">מגילות</button>
+                <button class="menu-item">קטורות</button>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button id="home">חזרה לדף הבית</button>
+            <button id="back">חזרה לדף אחד אחורה</button>
+        </div>
     </main>
-
-    <footer>
-        <p>© 2023 הגהת סת"ם. כל הזכויות שמורות.</p>
-    </footer>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
