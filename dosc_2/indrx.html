@@ -3,10 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>האתר שלי</title>
+    <title>הגהת סת"ם</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>ברוכים הבאים לאתר שלי!</h1>
-    <p>זהו העמוד הראשי של האתר שלי.</p>
+    <header>
+        <h1>אתר הגהות סת"ם</h1>
+        <nav>
+            <ul>
+                <li><a href="#login">כניסה לאזור האישי</a></li>
+                <li><a href="#guest">שימוש כאורח</a></li>
+                <li><a href="#history">היסטוריה</a></li>
+                <li><a href="#settings">הגדרות אישיות</a></li>
+                <li><a href="#help">עזרה/אודות</a></li>
+                <li><a href="#cookies">אישור עוגיות</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="personal-area">
+            <h2>אזור אישי</h2>
+            <button onclick="openFolder('ספר תורה')">ספר תורה</button>
+            <button onclick="openFolder('תפילין')">תפילין</button>
+            <button onclick="openFolder('מזוזות')">מזוזות</button>
+			<button onclick="openFolder('מגילת אסתר')">מגילות אסתר</button>
+			<button onclick="openFolder('נביאים')">נביאים</button>
+			<button onclick="openFolder('מגילות כללי')">מגילות כללי</button>
+			<button onclick="openFolder('קטורת')">קטורת</button>
+            <!-- הוספת כפתורים נוספים לפי הצורך -->
+        </section>
+
+        <section id="upload-images">
+            <h2>העלאת תמונות</h2>
+            <button onclick="uploadImage()">העלה תמונה</button>
+			<input type="file" accept="image/jpeg" />
+        </section>
+
+        <section id="image-analysis">
+            <h2>בדיקת איכות התמונה</h2>
+            <button onclick="checkImageQuality()">בדוק איכות תמונה</button>
+            <p id="quality-result"></p>
+        </section>
+        
+        <!-- הוספת עוד סעיפים לפי הצורך -->
+    </main>
+
+    <footer>
+        <p>© 2023 הגהת סת"ם. כל הזכויות שמורות.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
