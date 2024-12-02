@@ -1,4 +1,4 @@
-```javascript
+javascript
 document.getElementById('login').addEventListener('click', function() {
     document.getElementById('user-area').style.display = 'block';
     document.getElementById('guest-area').style.display = 'none';
@@ -17,12 +17,10 @@ document.getElementById('accept-cookies').addEventListener('click', function() {
 
 // Navigation
 document.getElementById('home').addEventListener('click', function() {
-    // Logic to go to home
     alert("חזרה לדף הבית");
 });
 
 document.getElementById('back').addEventListener('click', function() {
-    // Logic to go back one page
     alert("חזרה לדף אחד אחורה");
 });
 
@@ -48,7 +46,6 @@ function uploadImage() {
     fileInput.onchange = function(event) {
         const file = event.target.files[0];
         if (file) {
-            // Handle the uploaded image (e.g., displaying it on the site)
             const img = document.createElement('img');
             img.src = URL.createObjectURL(file);
             img.style.maxWidth = '100%'; // Adjust as needed
@@ -61,21 +58,10 @@ function uploadImage() {
 // Example functions for scanning and capturing images
 function scanImage() {
     alert("סריקה - יש לחבר את הסורק ולבצע סריקה.");
-    // Implement scanning functionality if applicable
 }
 
 function captureImage() {
     alert("צילום - יש להתחבר למצלמה ולבצע צילום.");
-    // Implement capturing functionality if applicable
-}
-
-// Example function to handle new item creation
-function createNewItem() {
-    const itemName = prompt("בחר שם חדש:");
-    if (itemName) {
-        alert(`הפריט החדש בשם ${itemName} נוצר!`);
-        // Add logic to save the new item
-    }
 }
 
 // Add event listeners for buttons to handle image upload, scanning, and capturing
