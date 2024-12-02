@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 javascript
 document.getElementById('login').addEventListener('click', function() {
     document.getElementById('user-area').style.display = 'block';
